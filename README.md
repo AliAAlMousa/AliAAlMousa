@@ -33,27 +33,6 @@ Where the CVE column is empty, no CVE identifier has been issued for that
 advisory yet. Reports still in triage, and any under a disclosure hold until a
 fix ships, are not listed here.
 
-### Patterns worth repeating
-
-Several of these are the same mistake in different code, which is why I keep
-looking for them:
-
-- **A security check keyed on a value the caller sets.** `csrf()` in hono and
-  `checkCSRF` in Qwik both decide from `Content-Type`, so a browser-sent
-  `text/ping` POST walks past them; hapi builds `request.url` from an
-  unvalidated `Host` header, so the path a guard reads is not the path that gets
-  served.
-- **A key that leaves out the thing it is keyed on.** undici stores a
-  credential-bearing response under the pre-redirect request key, so the next
-  caller is served someone else's body; paste picks the session file straight
-  from a cookie and unpickles it.
-- **Input that chooses its own parser.** docling lets an embedded picture select
-  the decoder, and one of those decoders shells out to Ghostscript; seroval lets
-  a value replace the property its serializer reads.
-
-These are worth more when a project's own security tests stop one case short of
-the bypass, which is usually where I start.
-
 ### Reporting
 
 If you maintain a project and want something looked at, or you are responding to
