@@ -10,13 +10,14 @@ Contact: contact@alialmousa.sa
 
 ### Published security advisories
 
-Eleven published GitHub Security Advisories, ten of them crediting me as Finder,
-three with a CVE assigned. The credit role in each row is the one the advisory
+Twelve published GitHub Security Advisories, eleven of them crediting me as
+Finder, three with a CVE assigned. The credit role in each row is the one the advisory
 itself records. Work reported directly to vendor security teams is not listed
 here until it is public.
 
 | Project | Advisory | CVE | Severity | Credit | Published |
 |---|---|---|---|---|---|
+| [LMCache](https://github.com/LMCache/LMCache) | [GHSA-hhqh-8jpj-27rf](https://github.com/LMCache/LMCache/security/advisories/GHSA-hhqh-8jpj-27rf) — unauthenticated proxy reaches any local UNIX socket, giving environment disclosure and remote code execution | — | Critical 9.8 | Finder | 23 Nov 2026 |
 | [paste](https://github.com/pasteorg/paste) | [GHSA-vf89-fq68-57cx](https://github.com/pasteorg/paste/security/advisories/GHSA-vf89-fq68-57cx) — `paste.session` unpickles a file chosen by the `_SID_` cookie, unauthenticated | — | Critical 9.8 | Finder | 28 Oct 2026 |
 | [Mercury](https://github.com/mljar/mercury) | [GHSA-w823-3v59-v22p](https://github.com/mljar/mercury/security/advisories/GHSA-w823-3v59-v22p) — unauthenticated notebook source and saved-output disclosure on protected servers | — | High 7.5 | Finder | 26 Oct 2026 |
 | [rope](https://github.com/python-rope/rope) | [GHSA-64m2-4gp9-7cqx](https://github.com/python-rope/rope/security/advisories/GHSA-64m2-4gp9-7cqx) — HMAC key in world-readable argv leads to `pickle.loads` RCE | — | High 7.3 | Finder | 5 Nov 2026 |
